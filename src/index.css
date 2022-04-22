@@ -19,3 +19,7 @@ code {
   display: flex;
   justify-content: center;
 }
+
+.componente-login {
+  border: 2px solid red;
+}
