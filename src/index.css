@@ -23,3 +23,11 @@ code {
 .componente-login {
   border: 2px solid red;
 }
+
+.componente-header {
+  border: 2px solid red;
+}
+
+.loading-text {
+  color: red;
+}
