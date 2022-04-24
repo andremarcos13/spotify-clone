@@ -26,8 +26,23 @@ code {
 
 .componente-header {
   border: 2px solid red;
+  text-align: center;
 }
 
 .loading-text {
   color: red;
+  text-align: center;
+
+}
+
+.nav-link-bar a {
+  font-size: larger;
+  text-align: center;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.nav-link-bar a:hover{
+  font-size:x-large;
+  background-color: rgb(95, 95, 95);
 }
