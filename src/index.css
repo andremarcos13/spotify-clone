@@ -46,3 +46,7 @@ code {
   font-size:x-large;
   background-color: rgb(95, 95, 95);
 }
+
+.componente-search{
+  border: solid 2px blue;
+}
