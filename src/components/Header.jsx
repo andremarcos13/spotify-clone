@@ -26,13 +26,13 @@ class Header extends React.Component {
         className="componente-header"
       >
         Componente Header
-        <h2>
+        <h2 data-testid="header-user-name">
           Bem-vindo,
           { loading && <Loading />}
           { userName }
           !
         </h2>
-        <nav className="nav-link-bar">
+        <nav className="nav-link">
           <Link to="/search" data-testid="link-to-search"> Search </Link>
           <Link to="/favorites" data-testid="link-to-favorites"> Favorites </Link>
           <Link to="/profile" data-testid="link-to-profile"> Profile </Link>
