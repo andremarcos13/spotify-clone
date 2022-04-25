@@ -50,3 +50,11 @@ code {
 .componente-search{
   border: solid 2px blue;
 }
+
+.componente-album{
+  border: solid 2px aqua;
+}
+
+.componente-musiccard{
+  border: solid 2px yellow;
+}
