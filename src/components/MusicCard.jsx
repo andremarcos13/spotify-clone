@@ -6,9 +6,10 @@ import Loading from '../pages/Loading';
 class MusicCard extends React.Component {
   constructor(props) {
     super(props);
+    const { checked } = this.props;
     this.state = {
       loading: false,
-      clickFav: false,
+      clickFav: checked,
     };
     this.handleFavorite = this.handleFavorite.bind(this);
   }
@@ -60,6 +61,7 @@ MusicCard.propTypes = {
   previewUrl: PropTypes.string.isRequired,
   trackId: PropTypes.number.isRequired,
   data: PropTypes.arrayOf.isRequired,
+  checked: PropTypes.bool.isRequired,
 };
 
 export default MusicCard;

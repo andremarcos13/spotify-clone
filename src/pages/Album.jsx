@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import getMusics from '../services/musicsAPI';
+import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import MusicCard from '../components/MusicCard';
 
 class Album extends React.Component {
@@ -23,6 +24,13 @@ class Album extends React.Component {
   async componentDidMount() {
     const { albumId } = this.state;
     const results = await getMusics(albumId);
+    console.log(results);
+    const resultsFav = await getFavoriteSongs();
+    results.forEach((elemt) => {
+      const jcResult = resultsFav
+        .find((favorites) => favorites.trackId === elemt.trackId);
+      elemt.isFav = jcResult !== undefined;
+    });
     this.setState({
       artist: results[0].artistName,
       album: results[0].collectionName,
@@ -50,6 +58,7 @@ class Album extends React.Component {
         { arrayOfMusics.filter((element) => element.trackId)
           .map((parameter) => (
             <MusicCard
+              checked={ parameter.isFav }
               data={ parameter }
               key={ parameter.trackId }
               trackId={ parameter.trackId }
